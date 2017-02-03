@@ -99,22 +99,11 @@ document.querySelector("#pig-latin button").addEventListener('click',function(){
 document.querySelector("#cycle-image button").addEventListener('click',function(){
    //TASK #8
    var imageTestEl = document.querySelector('#city-img.exercise-item')
-   
+   var imageNumber = imageTestEl.src.slice(75, 76)
+   if(imageNumber%10)
+   imageNumber++
+   imageTestEl.src = "./images/city-photo-" + imageNumber + ".jpg"
+   console.log(imageNumber)
 
-
-
-
-  //  imgArray = ['./images/city-photo-1.jpg','./images/city-photo-2.jpg','./images/city-photo-3.jpg','./images/city-photo-4.jpg','./images/city-photo-5.jpg','./images/city-photo-6.jpg','./images/city-photo-7.jpg','./images/city-photo-8.jpg','./images/city-photo-9.jpg', './images/city-photo-10.jpg']
-  //  var counter = 0
-  //  if(counter === 0){
-  //    imageTestEl.src = './images/city-photo-2.jpg';
-  //    counter++;
-  //  }else if(counter === 1){
-  //    imageTestEl.src = './images/city-photo-3.jpg';
-  //    counter++;
-  //  }else if(counter === 2){
-  //    imageTestEl.src = './images/city-photo-4.jpg';
-  //    counter++;
-  //  }
 
 })
